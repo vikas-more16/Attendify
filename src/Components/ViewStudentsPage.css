@@ -1,0 +1,246 @@
+.view-students-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 720px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.view-students-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.view-students-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.view-students-list-item {
+  background: #f9fafb;
+  padding: 1rem 1.5rem;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.view-students-list-item:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.view-students-roll {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.view-students-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #374151;
+  flex: 1;
+}
+
+@media (max-width: 500px) {
+  .view-students-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .view-students-roll {
+    margin-bottom: 6px;
+  }
+}
+
+/* Attendance Management Page Styles */
+
+body {
+  background: #f7f8fa;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.attendance-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.header-bar h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.header-bar .sub-title {
+  color: #888;
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+
+.stats-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stats-card {
+  flex: 1;
+  background: #f5f6fa;
+  border-radius: 12px;
+  padding: 24px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.stats-card .stat-title {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.stats-card .stat-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.stats-card .stat-value.green {
+  color: #1db954;
+}
+
+.stats-card .stat-value.red {
+  color: #e74c3c;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.action-buttons button,
+.action-buttons .btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-buttons button:hover,
+.action-buttons .btn:hover {
+  background: #444;
+}
+
+.table-responsive-custom {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+}
+
+.table th, .table td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table th {
+  background: #f5f6fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.status.present {
+  background: #eafaf1;
+  color: #1db954;
+}
+
+.status.absent {
+  background: #fdeaea;
+  color: #e74c3c;
+}
+
+.edit-btn {
+  background: #f5f6fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+}
+
+.edit-btn:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 900px) {
+  .attendance-container {
+    padding: 16px;
+  }
+  .stats-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .attendance-container {
+    padding: 6px;
+  }
+  .header-bar h2 {
+    font-size: 1.3rem;
+  }
+  .table th, .table td {
+    padding: 8px 4px;
+    font-size: 0.95rem;
+  }
+}
