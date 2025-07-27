@@ -17,7 +17,9 @@ export default defineConfig({
   preview: {
     host: "0.0.0.0",
     port: process.env.PORT || 4173,
-    allowedHosts: ["attendify-q4bi.onrender.com"],
+    allowedHosts: [
+      "attendify-buvz.onrender.com", // ✅ add this line
+    ],
   },
   build: {
     chunkSizeWarningLimit: 1000,
