@@ -18,8 +18,7 @@ export default defineConfig({
     host: "0.0.0.0",
     port: process.env.PORT || 4173,
     allowedHosts: [
-      "attendify-buvz.onrender.com",
-      "attendify.in.net",// ✅ add this line
+      "attendify.in.net", // ✅ add this line
     ],
   },
   build: {
