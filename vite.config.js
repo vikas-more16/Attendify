@@ -23,5 +23,50 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split vendor libraries into separate chunks
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          firebase: ['firebase/app', 'firebase/auth', 'firebase/analytics', 'firebase/firestore'],
+          ui: ['bootstrap', 'react-icons'],
+          utils: ['axios', 'papaparse'],
+        },
+      },
+    },
+    // Enable minification and compression
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    // Enable source maps for debugging
+    sourcemap: false,
+    // Optimize CSS
+    cssCodeSplit: true,
+    // Enable chunk size optimization
+    chunkSizeWarningLimit: 1000,
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'axios',
+      'firebase/app',
+      'firebase/auth',
+      'firebase/analytics',
+      'firebase/firestore',
+      'bootstrap',
+      'react-icons',
+    ],
+  },
+  // Enable experimental features for better performance
+  experimental: {
+    renderBuiltUrl: true,
   },
 });
