@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import "./index.css";
 import performanceMonitor from "./utils/performance.js";
 
 // Register service worker for offline support
